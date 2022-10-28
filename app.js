@@ -8,8 +8,11 @@ var PORTA = process.env.AMBIENTE_PROCESSO == "desenvolvimento" ? 3333 : 8080;
 
 var app = express();
 
-var indexRouter = require("./src/routes/index");
-var usuarioRouter = require("./src/routes/usuarios");
+const indexRouter = require("./src/routes/pages");
+const usuarioRouter = require("./src/routes/usuario");
+const maquinaRouter = require("./src/routes/maquina");
+const empresaRouter = require("./src/routes/empresa");
+const leituraRouter = require("./src/routes/leitura");
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -18,7 +21,11 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use(cors());
 
 app.use("/", indexRouter);
-app.use("/usuarios", usuarioRouter);
+app.use("/empresa", empresaRouter)
+app.use("/usuario", usuarioRouter);
+app.use("/maquina", maquinaRouter);
+app.use("/leitura", leituraRouter);
+
 
 app.listen(PORTA, function () {
     console.log(`Servidor do seu site já está rodando! Acesse o caminho a seguir para visualizar: http://localhost:${PORTA} \n

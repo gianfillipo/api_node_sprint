@@ -2,30 +2,692 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;700&display=swap" rel="stylesheet">
-    <title>Cadastro</title>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
+  <title>Mic Enterprise</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/mic-logo.png" rel="icon">
+  <link href="assets/img/mic-logo.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: BizLand - v3.8.1
+  * Template URL: https://bootstrapmade.com/bizland-bootstrap-business-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
 </head>
 
 <body>
-    <div class="container">
-        <h3>Formulário de cadastro</h3>
 
-        <input placeholder="Usuário" class="input" type="text" id="nome">
-        <input placeholder="Email" class="input" type="email" id="email">
-        <input placeholder="Telefone" class="input" type="tel" id="tel">
-        <input placeholder="Senha" class="input" type="password" id="senha">
+  <!-- ======= Top Bar ======= -->
+  
 
-        <button onclick="cadastrar()" class="btn" id="btnCad">Cadastrar</button>
-        <div id="snackbar"></div>
+  <!-- ======= Header ======= -->
+  <header id="header" class="d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <h1 class="logo"><a href="/">MiC<span>.</span></a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt=""></a>-->
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">Sobre</a></li>
+          <li><a class="nav-link scrollto" href="#services">Serviços</a></li>
+          <li><a class="nav-link scrollto" href="#team">Equipe</a></li>
+          <li><a class="cadastro" href="/login">Login</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+    <div class="container" data-aos="zoom-out" data-aos-delay="100">
+      <h1>Bem vindo à <span>MiC.</span></h1>
+      <h2>MiC Enterprise - Pense INTELIGENTE para ser o MELHOR.</h2>
+      <div class="d-flex">
+        <a href="#about" class="btn-get-started scrollto">Vamos lá!</a>
+      </div>
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= Featured Services Section ======= -->
+    <section id="featured-services" class="featured-services">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+              <div class="icon"><i class="bx bx-world"></i></div>
+              <h4 class="title"><a href="">Missão</a></h4>
+              <p class="description">Melhora e aumento no desempenho de Call Center pelo Brasil. Sempre pensado e agindo de forma clara, priorizando a vontade de nossos clientes de maneira inteligente!</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
+              <div class="icon"><i class="bx bi-exclamation-circle"></i></div>
+              <h4 class="title"><a href="">Visão</a></h4>
+              <p class="description">Se consolidar no mercado de monitoramento de hardwares, visando sempre a melhoria contínua nos processos e coleta de dados.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
+              <div class="icon"><i class="bx bx-file"></i></div>
+              <h4 class="title"><a href="">Valores</a></h4>
+              <p class="description"><br> <br> 
+                Clareza, Excelência e Integridade.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
+            <!-- <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
+              <div class="icon"><i class="bx bx-tachometer"></i></div>
+              <h4 class="title"><a href=""></a></h4>
+              <p class="description"><br> <br> 
+                </p> -->
+            </div>
+          </div>
+      
+        </div>
+
+      </div>
+    </section><!-- End Featured Services Section -->
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Sobre Nós</h2>
+          <h3>Conheça a <span>MiC</span></h3>
+          <p>Focados em inovar, nós da MiC estamos constantemente buscando mudanças e melhorias para nossos clientes. </p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
+            <img src="assets/img/about.jpg" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0 content d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="100">
+            <h3>O melhor do monitoramento inteligente!</h3>
+            <p class="fst-italic">
+              Somos uma empresa de monitoramento de hardware que visa melhorar o desempenho de Call Center e diminuir o tempo de paradas ocasionadas por mal funcionamento ou mal utilização de equipamentos.
+            </p>
+            <ul>
+              <li>
+                <i class="bx bx-chevron-right"></i>
+                <div>
+                  <h5>Dashboard intuitiva</h5>
+                  <p>Melhore sua visualização e tomada de decisão sobre sua empresa</p>
+                </div>
+              </li>
+              <li>
+                <i class="bx bx-chevron-right"></i>
+                <div>
+                  <h5>Captura de dados eficiente</h5>
+                  <p>Monitore suas máquinas e tenha um maior controle sobre sua operação</p>
+                </div>
+              </li>
+            </ul>
+            <p>
+              
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+  
+    </section><!-- End Counts Section -->
+
+    <!-- ======= Clients Section ======= -->
+      <!-- End Clients Section -->
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Serviços</h2>
+          <h3>Nossos <span>Planos</span></h3>
+          <p>Confira abaixo o que oferecemos e selecione qual se encaixa melhor na sua nescessidade.</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-money"></i></div>
+              <h4><a href="">Plano Básico</a></h4>
+              <p>• Tenha direito a 1 componente monitorável; 
+                <br>
+                 • Adicionar no até 2 colaboradores;
+                 <br>
+                 • Suporte 24/7;
+                 <br>
+                 • Manual de uso do softwate
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-money"></i></div>
+              <h4><a href=""></a>Plano Intermediario</h4>
+              <p>• Tenha direito a 3 componentes monitoráveis; 
+                <br>
+                 • Adicionar no até 5 colaboradores;
+                 <br>
+                 • Suporte 24/7;
+                <br>
+                 • Visita no local de forma gratuita;
+                <br>
+                 • Guia de instruções básicas com profisional presencial;
+                
+                </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="300">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-money"></i></div>
+              <h4><a href="">Plano Avançado</a></h4>
+              <p>• Tenha direito a 5 componentes monitoráveis; 
+                <br>
+                 • Colaboradores iliminados na plataforma;
+                 <br>
+                 • Suporte 24/7;
+                <br>
+                 • Visita no local de forma gratuita;
+                <br>
+                 • Guia de instruções avançadas com profisional presencial;
+                <br>
+                 • Preferencia nos chamados
+                </p>
+            </div>
+          </div>
+
+          <!-- <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="100">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-world"></i></div>
+              <h4><a href="">Nemo Enim</a></h4>
+              <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="200">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-slideshow"></i></div>
+              <h4><a href="">Dele cardo</a></h4>
+              <p>Quis consequatur saepe eligendi voluptatem consequatur dolor consequuntur</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="300">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-arch"></i></div>
+              <h4><a href="">Divera don</a></h4>
+              <p>Modi nostrum vel laborum. Porro fugit error sit minus sapiente sit aspernatur</p>
+            </div>
+          </div>
+
+        </div> -->
+
+      </div>
+    </section><!-- End Services Section -->
+
+    <!-- ======= Testimonials Section ======= -->
+    <section id="testimonials" class="testimonials">
+      <div class="container" data-aos="zoom-in">
+
+        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+                <h3>Carlos López-Abadía</h3>
+                <h4>Ceo - Atento</h4>
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Gostei muito dos serviços prestados pela MIC, agilidade no atendimento alem de rapidez e eficiência na solução dos problemas de hardware da minha empresa.  
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
+                <h3>Tatiane Penato</h3>
+                <h4>CEO - Algar tech</h4>
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                    Bem educados os proficionais da MIC, estão trazendo uma ideia inovadora e prestando total apoio para seus clientes, alem de nos proporcionar melhores resultados em nossas empresas.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
+                <h3>Mônica Herrero</h3>
+                <h4>CEO - LIQ</h4>
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Comecei a utilizar os serviços de monitoramen toda MIC agora, e estou sentindo uma melhor eficiência das maquinas da minha empresa com isso melhorando a produtividade dos meus funcionarios e das vendas na minha empresa. 
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
+                <h3>Vincent Bleunven</h3>
+                <h4>CEO - Allianz Partners</h4>
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                 Após começar a utilizar o monitoramento da MIC, recebi menos reclamações dos meus funcionarios em relação aos computadores da empresa, e agora em um curto período sendo solucionado os problemas de hardware da empresa. 
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
+                <h3>Fabricio Coutinho</h3>
+                <h4>CEO - Teleperformance</h4>
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Na minha opnião Rapidez e Eficiência definem o trabalho da MIC. Com o monitoramento de hardware tive uma alta na eficiência dos meus funcionarios e uma baixa taxa de reclamações referente as maquinas da empresa.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+    </section><!-- End Testimonials Section -->
+
+    <!-- ======= Portfolio Section ======= -->
+    <!-- End Portfolio Section -->
+
+    <!-- ======= Team Section ======= -->
+    <section id="team" class="team section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Nossa Equipe</h2>
+          <h3>Conheça nosso<span>Time</span></h3>
+          <p>O trabalho em equipe é
+            mais rico, forte e por
+            isso capaz de alcançar
+            as metas mais difíceis! Esses são alguns colaboradores MIC!</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+            <div class="member">
+              <div class="member-img">
+                <img src="assets/img/team/mauricio.jpg" class="img-fluid" alt="">
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>Mauricio Uesso</h4>
+                <span>Desenvolvedor Back End</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+            <div class="member">
+              <div class="member-img">
+                <img src="assets/img/team/medeiros.png" class="img-fluid" alt="">
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>Henrique Medeiros</h4>
+                <span>Gerente de TI</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+            <div class="member">
+              <div class="member-img">
+                <img src="assets/img/team/lari.jpg" class="img-fluid" alt="">
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>Larissa Gouveia</h4>
+                <span>Desenvolvedor Front End </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
+            <div class="member">
+              <div class="member-img">
+                <img src="assets/img/team/tonis.jpg" class="img-fluid" alt="">
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>Matheus Tonini</h4>
+                <span>Desenvolvedor Back End</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
+            <div class="member">
+              <div class="member-img">
+                <img src="assets/img/team/ezequiel.jpg" class="img-fluid" alt="">
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>Ezequiel Leandro</h4>
+                <span>Desenvolvedor Front End </span>
+              </div>
+            </div>
+          </div>
+          
+
+        </div>
+
+      </div>
+    </section><!-- End Team Section -->
+
+    <!-- ======= Pricing Section ======= -->
+    <!-- End Pricing Section -->
+
+    <!-- ======= Frequently Asked Questions Section ======= -->
+    <section id="faq" class="faq section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>F.A.Q</h2>
+          <h3>Perguntas <span>Frequentes</span></h3>
+          <p></p>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-xl-10">
+            <ul class="faq-list">
+
+              <li>
+                <div data-bs-toggle="collapse" class="collapsed question" href="#faq1">Como eu posso contratar a MiC para meu Call Center? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+                <div id="faq1" class="collapse" data-bs-parent=".faq-list">
+                  <p>
+                    Primeiro você irá se cadastrar, depois disso você será direcionado para a página onde poderá escolher o pacote que deseja contratar e prontinho! Você já faz parte da MIC Enterprise. 
+                  </p>
+                </div>
+              </li>
+
+              <li>
+                <div data-bs-toggle="collapse" href="#faq2" class="collapsed question">Por que contratar a MiC? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+                <div id="faq2" class="collapse" data-bs-parent=".faq-list">
+                  <p>
+                    A MiC é uma empresa focada no monitoramento de hardwares em Call Center. O nosso serviço pode te oferecer um controle maior sobre o que está acontecendo em suas máquinas. Com isso você poderá encontrar uma solução mais rápida para seu problema. 
+                  </p>
+                </div>
+              </li>
+
+              <li>
+                <div data-bs-toggle="collapse" href="#faq3" class="collapsed question">É possível monitorar todas as máquinas do meu Call Center? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+                <div id="faq3" class="collapse" data-bs-parent=".faq-list">
+                  <p>
+                    Sim, com a MiC você pode escolher monitorar a quantidade de máquinas de acordo com sua necessidade.
+                  </p>
+                </div>
+              </li>
+
+              <li>
+                <div data-bs-toggle="collapse" href="#faq4" class="collapsed question">Caso ocorra algum problema, como posso entrar em contato com o suporte? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+                <div id="faq4" class="collapse" data-bs-parent=".faq-list">
+                  <p>
+                    No próprio site temos um HelpDesk, onde você pode abrir um chamado e obter ajuda de um de nossos especialistas na área.
+                  </p>
+                </div>
+              </li>
+
+              <li>
+                <div data-bs-toggle="collapse" href="#faq5" class="collapsed question">Vocês monitoram todos os tipos de Hardwares? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+                <div id="faq5" class="collapse" data-bs-parent=".faq-list">
+                  <p>
+                    Nós conseguimos monitorar os Hardwares de acordo com a sua necessidade, caso você queira monitorar apenas CPU, nós conseguimos, caso queira monitorar todos os Hardwares das suas máquinas, nós conseguimos também.
+                  </p>
+                </div>
+              </li>
+
+              <li>
+                <div data-bs-toggle="collapse" href="#faq6" class="collapsed question">De onde são tirados os dados dos Hardwares? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+                <div id="faq6" class="collapse" data-bs-parent=".faq-list">
+                  <p>
+                    São retirados da sua máquina. Nosso sistema é responsável pela coleta destes dados, processamento e inserção deles em gráficos para melhor visualização.
+                  </p>
+                </div>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Frequently Asked Questions Section -->
+
+   
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3>MiC<span>.</span></h3>
+            <p>
+              Rua Haddok Lobo, 595 <br>
+              São Paulo, SP 01414-001<br>
+              Brasil <br><br>
+              <strong>Phone:</strong> (11)98204-0944<br>
+              <strong>Email:</strong>monitoramentoic.contato@gmail.com<br>
+            </p>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Sobre</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Serviços</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Equipe</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/login">Login</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Nossos Serviços</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
+              <!-- <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li> -->
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Redes Sociais</h4>
+            <p>Visite nossas redes sociais e siga a MiC!</p>
+            <div class="social-links mt-3">
+              <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+              <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+              <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+              <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+              <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+            </div>
+          </div>
+
+        </div>
+      </div>
     </div>
 
+    <div class="container py-4">
+      <div class="copyright">
+        <!-- &copy; Copyright <strong><span>BizLand</span></strong>. All Rights Reserved -->
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/bizland-bootstrap-business-template/ -->
+        <!-- Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> -->
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script>
+    // Buttons to 'switch' the page
+var openSignUpButton = document.getElementById("slide-left-button");
+var openSignInButton = document.getElementById("slide-right-button");
+
+// The sidebars
+var leftText = document.getElementById("sign-in");
+var rightText = document.getElementById("sign-up");
+
+// The forms
+var accountForm = document.getElementById("sign-in-info")
+var signinForm = document.getElementById("sign-up-info");
+
+// Open the Sign Up page
+openSignUp = () =>{
+  // Remove classes so that animations can restart on the next 'switch'
+  leftText.classList.remove("overlay-text-left-animation-out");
+  overlay.classList.remove("open-sign-in");
+  rightText.classList.remove("overlay-text-right-animation");
+  // Add classes for animations
+  accountForm.className += " form-left-slide-out"
+  rightText.className += " overlay-text-right-animation-out";
+  overlay.className += " open-sign-up";
+  leftText.className += " overlay-text-left-animation";
+  // hide the sign up form once it is out of view
+  setTimeout(function(){
+    accountForm.classList.remove("form-left-slide-in");
+    accountForm.style.display = "none";
+    accountForm.classList.remove("form-left-slide-out");
+  }, 700);
+  // display the sign in form once the overlay begins moving right
+  setTimeout(function(){
+    signinForm.style.display = "flex";
+    signinForm.classList += " form-right-slide-in";
+  }, 200);
+}
+
+// Open the Sign In page
+openSignIn = () =>{
+  // Remove classes so that animations can restart on the next 'switch'
+  leftText.classList.remove("overlay-text-left-animation");
+  overlay.classList.remove("open-sign-up");
+  rightText.classList.remove("overlay-text-right-animation-out");
+  // Add classes for animations
+  signinForm.classList += " form-right-slide-out";
+  leftText.className += " overlay-text-left-animation-out";
+  overlay.className += " open-sign-in";
+  rightText.className += " overlay-text-right-animation";
+  // hide the sign in form once it is out of view
+  setTimeout(function(){
+    signinForm.classList.remove("form-right-slide-in")
+    signinForm.style.display = "none";
+    signinForm.classList.remove("form-right-slide-out")
+  },700);
+  // display the sign up form once the overlay begins moving left
+  setTimeout(function(){
+    accountForm.style.display = "flex";
+    accountForm.classList += " form-left-slide-in";
+  },200);
+}
+
+// When a 'switch' button is pressed, switch page
+openSignUpButton.addEventListener("click", openSignUp, false);
+openSignInButton.addEventListener("click", openSignIn, false);
+  </script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
 </body>
-<script src="./js/main.js"></script>
+
 </html>

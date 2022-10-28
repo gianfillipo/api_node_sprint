@@ -1,4 +1,4 @@
-var database = require("../database/config")
+const database = require("../database/config")
 
 function listar() {
     console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function listar()");
@@ -12,24 +12,35 @@ function listar() {
 function entrar(email, senha) {
     console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function entrar(): ", email, senha)
     var instrucao = `
-        SELECT * FROM usuario WHERE email = '${email}' AND senha = '${senha}';
+        SELECT * FROM analista WHERE emailAnalista = '${email}' AND senhaAnalista = '${senha}';
     `;
     console.log("Executando a instrução SQL: \n" + instrucao);
     return database.executar(instrucao);
 }
 
 // Coloque os mesmos parâmetros aqui. Vá para a var instrucao
-function cadastrar(nome, email, tel, senha) {
+function cadastrar(fkEmpresa, nome, email, senha) {
     console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function cadastrar():", nome, email, tel, senha);
     
     // Insira exatamente a query do banco aqui, lembrando da nomenclatura exata nos valores
     //  e na ordem de inserção dos dados.
     var instrucao = `
-        INSERT INTO Usuario (nome, email, tel, senha) VALUES ('${nome}', '${email}', '${tel}', '${senha}');
+        INSERT INTO analista (fkEmpresa, nomeAnalista, emailAnalista, senhaAnalista) VALUES (${fkEmpresa},'${nome}', '${email}', '${senha}');
     `;
     console.log("Executando a instrução SQL: \n" + instrucao);
     return database.executar(instrucao);
 }
+
+/* 
+    analista (
+idAnalista INT PRIMARY KEY AUTO_INCREMENT, 
+fkEmpresa int,
+foreign key (fkEmpresa) references empresa (idEmpresa),
+nomeAnalista VARCHAR (45),
+emailAnalista VARCHAR (60),
+senhaAnalista VARCHAR (45)
+);
+*/
 
 module.exports = {
     entrar,

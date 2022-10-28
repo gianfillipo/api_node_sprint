@@ -1,4 +1,4 @@
-var usuarioModel = require("../models/usuarioModel");
+const usuarioModel = require("../models/usuarioModel");
 
 function listar(req, res) {
     usuarioModel.listar()
@@ -17,16 +17,17 @@ function listar(req, res) {
         );
 }
 
-function entrar(req, res) {
-    var email = req.body.emailServer;
-    var senha = req.body.senhaServer;
+function entrar (req, res) {
+
+    const email = req.body.emailServer;
+    const senha = req.body.senhaServer;
 
     if (email == undefined) {
         res.status(400).send("Seu email está undefined!");
     } else if (senha == undefined) {
         res.status(400).send("Sua senha está indefinida!");
     } else {
-        
+
         usuarioModel.entrar(email, senha)
             .then(
                 function (resultado) {
@@ -55,18 +56,18 @@ function entrar(req, res) {
 
 function cadastrar(req, res) {
     // Crie uma variável que vá recuperar os valores do arquivo cadastro.html
-    var nome = req.body.nomeServer;
-    var email = req.body.emailServer;
-    var tel = req.body.telServer;
-    var senha = req.body.senhaServer;
+    const fkEmpresa = req.body.fkEmpresaServer;
+    const nome = req.body.nomeServer;
+    const email = req.body.emailServer;
+    const senha = req.body.senhaServer;
 
     // Faça as validações dos valores
     if (nome == undefined) {
         res.status(400).send("Seu nome está undefined!");
     } else if (email == undefined) {
         res.status(400).send("Seu email está undefined!");
-    } else if (tel == undefined) {
-        res.status(400).send("Seu telefone está undefined!");
+    } else if (fkEmpresa == undefined) {
+        res.status(400).send("A fk da empresa está undefined!");
     } else if (senha == undefined) {
             res.status(400).send("Sua senha está undefined!");
     } else {
@@ -89,8 +90,6 @@ function cadastrar(req, res) {
             );
     }
 }
-
-
 
 module.exports = {
     entrar,
