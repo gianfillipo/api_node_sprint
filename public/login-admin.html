@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Cadastro Usuário- MIC</title>
+  <title>Login-MIC</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -45,11 +45,16 @@
       <section class="section register min-vh-100 d-flex flex-column align-items-center justify-content-center py-4">
         <div class="container">
           <div class="row justify-content-center">
+  
+  
+  
+  
+  
             <div class="col-lg-4 col-md-6 d-flex flex-column align-items-center justify-content-center">
 
               <div class="d-flex justify-content-center py-4">
-                <a href="index.html" class="logo d-flex align-items-center w-auto">
-                  <img src="assets/img/mic-logo.png" alt="">
+                <a href="/" class="logo d-flex align-items-center w-auto">
+                  <img src="assets/img/mic-logo.png" alt="" style="width: 128px;">
                   <span class="d-none d-lg-block"></span>
                 </a>
               </div><!-- End Logo -->
@@ -59,46 +64,50 @@
                 <div class="card-body">
 
                   <div class="pt-4 pb-2">
-                    <h5 class="card-title text-center pb-0 fs-4">Cadastro de usários!</h5>
-                    <p class="text-center small">Insira os dados a seguir para criar sua conta.</p>
+                    <h5 class="card-title text-center pb-0 fs-4">login empresarial</h5>
+                    <p class="text-center small">Entre com sem e-mail de cadastro e senha.</p>
                   </div>
 
-                  <form class="row g-3 needs-validation" novalidate>
                     <div class="col-12">
-                      <label for="yourName" class="form-label">Nome</label>
-                      <input type="text" name="name" class="form-control" id="nome" required>
-                      <div class="invalid-feedback">Por favor, insira o nome da empresa!</div>
+                      <label for="yourUsername" class="form-label">E-mail</label>
+                      <div class="input-group has-validation">
+                        
+                        <input type="email" name="username" class="form-control" id="yourUsername" required>
+                        <div class="invalid-feedback">Insira seu nome de usuário!</div>
+                      </div>
                     </div>
 
-                    <div class="col-12">
-                      <label for="yourEmail" class="form-label">E-mail</label>
-                      <input type="email" name="email" class="form-control" id="email" required>
-                      <div class="invalid-feedback">Por favor, insira o e-mail da empresa!</div>
-                    </div>
+                    <br>
 
                     <div class="col-12">
                       <label for="yourPassword" class="form-label">Senha</label>
-                      <input type="password" name="password" class="form-control" id="senha" required>
-                      <div class="invalid-feedback">Por favor, crie uma senha!</div>
+                      <input type="password" name="password" class="form-control" id="yourPassword" required>
+                      <div class="invalid-feedback">Insira a sua senha!</div>
                     </div>
 
-                
+                    <br>
+
                     <div class="col-12">
                       <div class="form-check">
-                        <input class="form-check-input" name="terms" type="checkbox" value="" id="acceptTerms" required>
-                        <label class="form-check-label" for="acceptTerms">Eu concordo e aceito os termos.<a href="#">Termos e condições</a></label>
-                        <div class="invalid-feedback">Para se cadastrar você deve aceitar os termos e condições.</div>
+                        <input class="form-check-input" type="checkbox" name="remember" value="true" id="rememberMe">
+                        <label class="form-check-label" for="rememberMe">Lembrar identificação de usuário</label>
                       </div>
                     </div>
-                    <div class="col-12">
-                      <button class="btn btn-primary w-100" type="submit">Cadastrar novo usuário</button>
-                    </div>
-                    <div class="col-12">
-                        <p class="small mb-0">Voltar a pagina de<a href="index.html"> monitoramento</a></p>
-                      </div>
-                  </form>
 
-                </div>
+                    <div class="col-12">
+                      <button class="btn btn-primary w-100" type="submit" >Login</button>
+                    </div>
+                    <br>
+                    <div class="col-12">
+                      <p class="small mb-0">Não possui conta? <a href="../public/cadastro-empresa.html">Cria sua conta </a></p>
+                    </div>
+                    <br>
+                    <div class="col-12">
+                      <p class="small mb-0">Não é um administrador? <a href="../public/login-user.html">Entrar como usuário </a></p>
+                    </div>
+                  </form>
+                  
+                </div>    
               </div>
 
               <div class="credits">
@@ -106,7 +115,7 @@
                 <!-- You can delete the links only if you purchased the pro version. -->
                 <!-- Licensing information: https://bootstrapmade.com/license/ -->
                 <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
-                <a href="https://bootstrapmade.com/">
+                <a href="https://bootstrapmade.com/"></a>
               </div>
 
             </div>
@@ -133,48 +142,66 @@
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
   <script>
-    function cadastrarUsuario() {
+    function logar() {
 
-      const nomeVar = nome.value
-      const emailVar = email.value
-      const senhaVar = senha.value
-
-      if(nomeVar == "" || emailVar == "" || senhaVar == "") {
-
-        return alert("Preencha todos os campos")
-      }
-
-      fetch("/usuario/cadastro", {
+      event.preventDefault()
+      
+      if(in_checkbox.checked) {
+        fetch('/empresa/entrar', {
           method: "POST",
           headers: {
-              "Content-Type": "application/json"
+            "Content-Type": "application/json"
           },
           body: JSON.stringify({
-              // crie um atributo que recebe o valor recuperado aqui
-              // Agora vá para o arquivo routes/usuario.js
-              nomeServer: nomeVar,
-              emailServer: emailVar,
-              senhaServer: senhaVar,
-              fkEmpresa: sessionStorage.ID_EMPRESA
+            emailServer:yourUsername.value,
+            senhaServer:yourPassword.value
           })
-      }).then(function (resposta) {
+        })
+        .then(function(response) {
+          if (response.ok) {
 
-          console.log("resposta: ", resposta);
-
-          if (resposta.ok) {
-
-              alert("Usuário cadastrado")
-              setTimeout(() => {
-                  window.location = "/logged-company";
-              }, "2000")
-              
-          } else {
-              throw ("Houve um erro ao tentar realizar o cadastro!");
+            response.json()
+            .then(json => {
+              sessionStorage.ID_EMPRESA = json.idEmpresa
+              console.log(JSON.stringify(json))
+              window.location = "/logged-company"
+            })
           }
-      }).catch(function (resposta) {
-          console.log(`#ERRO: ${resposta}`);
-          // finalizarAguardar();
-      });
+            else {
+              alert("Usuário ou senha incorretos")
+            }
+        })
+        .catch(function(err) {
+          alert("Tudo errado")
+        console.log(err)
+        })
+      } 
+      else {
+        fetch('/usuario/entrar', {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+              emailServer:yourUsername.value,
+              senhaServer:yourPassword.value
+            })
+          })
+          .then(function(response) {
+            if (response.ok) {
+              
+              window.location = "/logged-user"
+            }
+            else {
+              alert("Deu ruim")
+            }
+            console.log(response)
+          })
+          .catch(function(err) {
+            alert("Tudo errado")
+          console.log(err)
+          })
+      }     
     }
   </script>
 

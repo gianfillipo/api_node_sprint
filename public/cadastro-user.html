@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Cadastro - MIC</title>
+  <title>Cadastro Usuário- MIC</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -48,8 +48,8 @@
             <div class="col-lg-4 col-md-6 d-flex flex-column align-items-center justify-content-center">
 
               <div class="d-flex justify-content-center py-4">
-                <a href="/" class="logo d-flex align-items-center w-auto">
-                  <img src="assets/img/mic-logo.png" alt="" style="width: 0px">
+                <a href="index.html" class="logo d-flex align-items-center w-auto">
+                  <img src="assets/img/mic-logo.png" alt="" style="width: 128px;">
                   <span class="d-none d-lg-block"></span>
                 </a>
               </div><!-- End Logo -->
@@ -59,45 +59,28 @@
                 <div class="card-body">
 
                   <div class="pt-4 pb-2">
-                    <h5 class="card-title text-center pb-0 fs-4">Crie sua conta!</h5>
-                    <p class="text-center small">Insira os dados a seguir para criar sua conta</p>
+                    <h5 class="card-title text-center pb-0 fs-4">Cadastro de usuários</h5>
+                    <p class="text-center small">Insira os dados a seguir para criar sua conta.</p>
                   </div>
 
-                  <form onsubmit="cadastrar()" class="row g-3 needs-validation" novalidate>
+                  <form class="row g-3 needs-validation" novalidate>
                     <div class="col-12">
-                      <label for="yourName" class="form-label">Nome da Empresa</label>
+                      <label for="yourName" class="form-label">Nome</label>
                       <input type="text" name="name" class="form-control" id="nome" required>
-                      <div class="invalid-feedback">Por favor, insira o nome da empresa!</div>
+                      <div class="invalid-feedback">Por favor, insira o nome do usuário!</div>
                     </div>
 
                     <div class="col-12">
                       <label for="yourEmail" class="form-label">E-mail</label>
                       <input type="email" name="email" class="form-control" id="email" required>
-                      <div class="invalid-feedback">Por favor, insira o e-mail da empresa!</div>
+                      <div class="invalid-feedback">Por favor, insira o e-mail do usuário!</div>
                     </div>
 
-                    <div class="col-12">
-                      <label for="yourEmail" class="form-label">CNPJ</label>
-                      <input type="text" name="cnpj" class="form-control" id="cnpj" required>
-                      <div class="invalid-feedback">Por favor, insira seu CNPJ!</div>
-                    </div>
 
                     <div class="col-12">
-                      <label for="yourEmail" class="form-label">CEP</label>
-                      <input type="text" name="cep" class="form-control" id="cep" required>
-                      <div class="invalid-feedback">Por favor, insira somente os números do cep</div>
-                    </div>
-
-                    <div class="col-12">
-                      <label for="yourEmail" class="form-label">Estado</label>
-                      <input type="text" name="estado" class="form-control" id="estado" required>
-                      <div class="invalid-feedback">Por favor, insira seu estado</div>
-                    </div>
-
-                    <div class="col-12">
-                      <label for="yourPassword" class="form-label">Número</label>
-                      <input type="number" name="numero" class="form-control" id="numero" required>
-                      <div class="invalid-feedback">Por favor, insira o número da sede!</div>
+                      <label for="yourEmail" class="form-label">Telefone</label>
+                      <input type="tel" name="telefone" class="form-control" id="telefone" required>
+                      <div class="invalid-feedback">Por favor, insira o telefone do usuário!</div>
                     </div>
 
                     <div class="col-12">
@@ -106,11 +89,13 @@
                       <div class="invalid-feedback">Por favor, crie uma senha!</div>
                     </div>
 
-                    
-                    
+                    <div class="col-12">
+                      <label for="yourName" class="form-label">Código da empresa</label>
+                      <input type="number" name="empresa" class="form-control" id="codEmpresa" required>
+                      <div class="invalid-feedback">Por favor, insira o código da empresa!</div>
+                    </div>
 
-                   
-
+                
                     <div class="col-12">
                       <div class="form-check">
                         <input class="form-check-input" name="terms" type="checkbox" value="" id="acceptTerms" required>
@@ -119,12 +104,11 @@
                       </div>
                     </div>
                     <div class="col-12">
-                      <button class="btn btn-primary w-100" type="submit">Criar conta</button>
+                      <button class="btn btn-primary w-100" type="submit">Cadastrar novo usuário</button>
                     </div>
                     <div class="col-12">
-                      <p class="small mb-0">Já possui cadastro? <a href="/login">Login</a></p>
-                    </div>
-                    <div id="snackbar"></div>
+                        <p class="small mb-0">Voltar a pagina de<a href="index.html"> monitoramento</a></p>
+                      </div>
                   </form>
 
                 </div>
@@ -161,27 +145,19 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-
   <script>
-    function cadastrar() {
+    function cadastrarUsuario() {
 
-      event.preventDefault()
-      const nomeVar = nome.value;
-      const emailVar = email.value;
-      const telefoneVar = telefone.value;
-      const senhaVar = senha.value;
-      const cnpjVar = cnpj.value;
-      const qtdSetoresVar = qtdSetores.value;
+      const nomeVar = nome.value
+      const emailVar = email.value
+      const senhaVar = senha.value
 
-      if (nomeVar == "" || emailVar == "" || telefoneVar == "" || senhaVar == "" || qtdSetoresVar == "") {
+      if(nomeVar == "" || emailVar == "" || senhaVar == "") {
 
-          alert("É necessário preecher todos os campos!");
-
-          return false;
+        return alert("Preencha todos os campos")
       }
 
-      // Enviando o valor da nova input
-      fetch("/empresa/cadastro", {
+      fetch("/usuario/cadastro", {
           method: "POST",
           headers: {
               "Content-Type": "application/json"
@@ -192,9 +168,7 @@
               nomeServer: nomeVar,
               emailServer: emailVar,
               senhaServer: senhaVar,
-              cnpjServer: cnpjVar,
-              telefoneServer: telefoneVar,
-              setoresServer: qtdSetoresVar
+              fkEmpresa: sessionStorage.ID_EMPRESA
           })
       }).then(function (resposta) {
 
@@ -202,8 +176,9 @@
 
           if (resposta.ok) {
 
+              alert("Usuário cadastrado")
               setTimeout(() => {
-                  window.location = "/login";
+                  window.location = "/logged-company";
               }, "2000")
               
           } else {
@@ -213,11 +188,9 @@
           console.log(`#ERRO: ${resposta}`);
           // finalizarAguardar();
       });
-
-      return false;
     }
   </script>
-</body>
 
+</body>
 
 </html>
