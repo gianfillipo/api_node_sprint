@@ -54,7 +54,7 @@
 
               <div class="d-flex justify-content-center py-4">
                 <a href="/" class="logo d-flex align-items-center w-auto">
-                  <img src="assets/img/mic-logo.png" style="width: 136px">
+                  <img src="assets/img/mic-logo.png" alt="" style="width: 128px;">
                   <span class="d-none d-lg-block"></span>
                 </a>
               </div><!-- End Logo -->
@@ -64,17 +64,9 @@
                 <div class="card-body">
 
                   <div class="pt-4 pb-2">
-                    <h5 class="card-title text-center pb-0 fs-4">Faça seu login!</h5>
+                    <h5 class="card-title text-center pb-0 fs-4">Login de usuário</h5>
                     <p class="text-center small">Entre com sem e-mail de cadastro e senha.</p>
                   </div>
-
-                  <form onsubmit="logar()" class="row g-3 needs-validation" novalidate>
-                    <label class="switch">
-                      <input type="checkbox" id="in_checkbox">
-                      Entrar com login da empresa
-                      <span class="slider round"></span>
-                    
-                    </label>
 
                     <div class="col-12">
                       <label for="yourUsername" class="form-label">E-mail</label>
@@ -85,11 +77,26 @@
                       </div>
                     </div>
 
+                    <br>
+
+                    <div class="col-12">
+                      <label for="yourUsername" class="form-label">Código da empresa</label>
+                      <div class="input-group has-validation">
+                        
+                        <input type="email" name="username" class="form-control" id="yourUsername" required>
+                        <div class="invalid-feedback">Insira seu código empresarial</div>
+                      </div>
+                    </div>
+
+                    <br>
+
                     <div class="col-12">
                       <label for="yourPassword" class="form-label">Senha</label>
                       <input type="password" name="password" class="form-control" id="yourPassword" required>
                       <div class="invalid-feedback">Insira a sua senha!</div>
                     </div>
+
+                    <br>
 
                     <div class="col-12">
                       <div class="form-check">
@@ -97,11 +104,17 @@
                         <label class="form-check-label" for="rememberMe">Lembrar identificação de usuário</label>
                       </div>
                     </div>
+
                     <div class="col-12">
                       <button class="btn btn-primary w-100" type="submit" >Login</button>
                     </div>
+                    <br>
                     <div class="col-12">
-                      <p class="small mb-0">Não possui conta? <a href="/register">Cria sua conta </a></p>
+                      <p class="small mb-0">Não possui conta? <a href="../public/cadastro-empresa.html">Cria sua conta </a></p>
+                    </div>
+                    <br>
+                    <div class="col-12">
+                      <p class="small mb-0">É um administrador? <a href="../public/login-admin.html">Entrar como empresa </a></p>
                     </div>
                   </form>
                   

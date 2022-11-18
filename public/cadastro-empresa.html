@@ -42,14 +42,20 @@
   <main>
     <div class="container">
 
+  
       <section class="section register min-vh-100 d-flex flex-column align-items-center justify-content-center py-4">
         <div class="container">
           <div class="row justify-content-center">
             <div class="col-lg-4 col-md-6 d-flex flex-column align-items-center justify-content-center">
 
               <div class="d-flex justify-content-center py-4">
+<<<<<<< HEAD:public/pages-register.html
                 <a href="/" class="logo d-flex align-items-center w-auto">
                   <img src="assets/img/mic-logo.png" alt="" style="width: 136px">
+=======
+                <a href="index.html" class="logo d-flex align-items-center w-auto">
+                  <img src="assets/img/mic-logo.png" alt="" style="width: 128px;">
+>>>>>>> c1037a286f7288375fd949e1be5e9989f1d1992d:public/cadastro-empresa.html
                   <span class="d-none d-lg-block"></span>
                 </a>
               </div><!-- End Logo -->
@@ -66,38 +72,38 @@
                   <form onsubmit="cadastrar()" class="row g-3 needs-validation" novalidate>
                     <div class="col-12">
                       <label for="yourName" class="form-label">Nome da Empresa</label>
-                      <input type="text" name="name" class="form-control" id="nome" required>
+                      <input type="text" name="nome" class="form-control" id="nomeEmp" required>
                       <div class="invalid-feedback">Por favor, insira o nome da empresa!</div>
                     </div>
 
                     <div class="col-12">
                       <label for="yourEmail" class="form-label">E-mail</label>
-                      <input type="email" name="email" class="form-control" id="email" required>
+                      <input type="email" name="email" class="form-control" id="emailEmp" required>
                       <div class="invalid-feedback">Por favor, insira o e-mail da empresa!</div>
                     </div>
 
                     <div class="col-12">
                       <label for="yourEmail" class="form-label">CNPJ</label>
-                      <input type="text" name="cnpj" class="form-control" id="cnpj" required>
+                      <input type="text" name="cnpj" class="form-control" id="cnpjEmp" required>
                       <div class="invalid-feedback">Por favor, insira seu CNPJ!</div>
                     </div>
 
                     <div class="col-12">
                       <label for="yourEmail" class="form-label">CEP</label>
-                      <input type="text" name="cep" class="form-control" id="cep" required>
+                      <input type="text" name="cep" class="form-control" id="cepEmp" required>
                       <div class="invalid-feedback">Por favor, insira somente os números do cep</div>
                     </div>
 
                     <div class="col-12">
                       <label for="yourEmail" class="form-label">Estado</label>
-                      <input type="text" name="estado" class="form-control" id="estado" required>
-                      <div class="invalid-feedback">Por favor, insira seu estado</div>
+                      <input type="text" name="estado" class="form-control" id="estadoEmp" required>
+                      <div class="invalid-feedback">Por favor, insira o estado da sede de sua empresa</div>
                     </div>
 
                     <div class="col-12">
                       <label for="yourPassword" class="form-label">Número</label>
-                      <input type="number" name="numero" class="form-control" id="numero" required>
-                      <div class="invalid-feedback">Por favor, insira o número da sede!</div>
+                      <input type="number" name="numero" class="form-control" id="numeroEmp" required>
+                      <div class="invalid-feedback">Por favor, insira o número de contato da sede!</div>
                     </div>
 
                     <div class="col-12">
@@ -105,11 +111,6 @@
                       <input type="password" name="password" class="form-control" id="senha" required>
                       <div class="invalid-feedback">Por favor, crie uma senha!</div>
                     </div>
-
-                    
-                    
-
-                   
 
                     <div class="col-12">
                       <div class="form-check">
