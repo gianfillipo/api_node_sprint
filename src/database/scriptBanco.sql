@@ -42,7 +42,7 @@ create table computador_kotlin (
     cpu_nucleos_fisicos int not null,
     memoria_total float not null,
     fk_empresa int not null
-)
+);
 
 create table disco_dinamico (
 	id int primary key identity (300,1),
@@ -60,12 +60,12 @@ create table disco_dinamico_kotlin (
     foreign key (fk_computador_kotlin) references computador_kotlin(id),
     total float,
     qtdDisco int,
-    dataHora,
+    dataHora datetime,
     fk_computador_kotlin int not null
 );
 
 create table cpu_dinamica (
-	id int primary key identity (500,1)
+	id int primary key identity (500,1),
     foreign key (fk_computador) references computador(id),
 	pct_uso float,
     freq_uso float,
@@ -74,7 +74,7 @@ create table cpu_dinamica (
 );
 
 create table cpu_dinamica_kotlin (
-	id int primary key identity (500,1)
+	id int primary key identity (500,1).
     foreign key (fk_computador_kotlin) references computador_kotlin(id),
 	pct_uso float,
     freq_uso float,
@@ -99,6 +99,6 @@ create table memoria_dinamica_kotlin (
     mem_total float,
     mem_usando float,
     mem_livre float,
-    dataHora,
+    dataHora datetime,
     fk_computador_kotlin int not null
 );  
